@@ -1,23 +1,37 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Currency Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>💱 My Currency Converter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Currency Converter</h1>
-  <div id="converter">
-    <input type="number" id="amount" placeholder="Amount" />
-    <select id="from-currency"></select>
-    <button id="swap">⇄</button>
-    <select id="to-currency"></select>
-    <p id="result"></p>
-    <button id="convert">Convert</button>
-    <button id="toggle-theme">Toggle Theme</button>
+  <h1>💱 Currency Converter</h1>
+
+  <button id="toggle-theme">🌓 Toggle Theme</button>
+
+  <div class="converter-box">
+    <div class="dropdowns">
+      <img id="from-flag" width="30" />
+      <select id="fromCurrency"></select>
+
+      <img id="to-flag" width="30" />
+      <select id="toCurrency"></select>
+    </div>
+
+    <input type="number" id="amount" placeholder="Enter amount" />
+    
+    <div class="buttons">
+      <button id="convert">Convert</button>
+      <button id="swap">🔁 Swap</button>
+    </div>
+
+    <div id="result">Your result will appear here.</div>
   </div>
+
+  <footer>Made with ❤️ by Shubh</footer>
+
   <script src="script.js"></script>
 </body>
 </html>
