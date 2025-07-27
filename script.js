@@ -52,8 +52,13 @@ function convert() {
     .then((res) => res.json())
     .then((data) => {
       const rate = data.rates[to];
+      if (!rate) {
+        result.innerText = "⚠️ Conversion rate not available.";
+        return;
+      }
+
       const converted = (amt * rate).toFixed(2);
-      result.innerText = `💰 ${amt} ${from} = ${converted} ${to}`;
+      result.innerHTML = `💰 ${amt} ${from} = <b>${converted} ${to}</b><div id="rate">1 ${from} = ${rate.toFixed(2)} ${to}</div>`;
     })
     .catch(() => {
       result.innerText = "⚠️ API error. Try again later.";
@@ -74,4 +79,5 @@ document.getElementById("swap").addEventListener("click", () => {
 document.getElementById("toggle-theme").addEventListener("click", () => {
   document.body.classList.toggle("light-mode");
 });
+
 
