@@ -59,5 +59,16 @@ img {
   margin-right: 5px;
 }
 
+/* ✅ New style for conversion rate */
+#rate {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.light-mode #rate {
+  color: #555;
+}
+
 
 
